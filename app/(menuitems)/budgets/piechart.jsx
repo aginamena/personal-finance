@@ -1,20 +1,6 @@
- "use client";
-// import { PieChart } from "react-minimal-pie-chart";
+"use client";
 
-// export default function PieChartCmp() {
-//   return (
-//     <PieChart
-//       data={[
-//         { title: "Entertainment", value: 50, color: "#277C78" },
-//         { title: "Bills", value: 50, color: "#82C9D7" },
-//         { title: "Dinning Out", value: 50, color: "#F2CDAC" },
-//         { title: "Personal Care", value: 50, color: "#626070" },
-//       ]}
-//     />
-//   );
-// }
-
-import { PieChart } from '@mui/x-charts/PieChart';
+import { PieChart } from "@mui/x-charts/PieChart";
 
 export default function PieChartCmp() {
   return (
@@ -22,12 +8,14 @@ export default function PieChartCmp() {
       series={[
         {
           data: [
-            { id: 0, value: 10, label: 'series A' },
-            { id: 1, value: 15, label: 'series B' },
-            { id: 2, value: 20, label: 'series C' },
+            { id: 0, value: 50, label: "Entertainment" },
+            { id: 1, value: 50, label: "Bills" },
+            { id: 2, value: 50, label: "Dinning Out" },
+            { id: 2, value: 50, label: "Personal Care" },
           ],
         },
       ]}
+      colors={["#277C78", "#82C9D7", "#F2CDAC", "#626070"]}
       width={400}
       height={200}
     />

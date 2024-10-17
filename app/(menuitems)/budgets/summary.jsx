@@ -1,7 +1,6 @@
-import { Typography, Box } from "@mui/material";
-import Image from "next/image";
 import RightArrow from "@/public/assets/images/icon-caret-right.svg";
-import { PieChart } from "react-minimal-pie-chart";
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 import PieChartCmp from "./piechart";
 
 export default function BudgetSummary() {
@@ -24,30 +23,6 @@ export default function BudgetSummary() {
       </Box>
       <Box>
         <PieChartCmp />
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "20px",
-          }}
-        >
-          <Box>
-            <Typography sx={{ fontSize: "13px" }}>Entertainment</Typography>
-            <Typography sx={{ fontWeight: "bold" }}>$50</Typography>
-          </Box>
-          <Box>
-            <Typography sx={{ fontSize: "13px" }}>Bills</Typography>
-            <Typography sx={{ fontWeight: "bold" }}>$50</Typography>
-          </Box>
-          <Box>
-            <Typography sx={{ fontSize: "13px" }}>Dinning Out</Typography>
-            <Typography sx={{ fontWeight: "bold" }}> $50</Typography>
-          </Box>
-          <Box>
-            <Typography sx={{ fontSize: "13px" }}>Personal Care</Typography>
-            <Typography sx={{ fontWeight: "bold" }}>$50</Typography>
-          </Box>
-        </Box>
       </Box>
     </Box>
   );

@@ -8,10 +8,16 @@ export default function Balance({ name, amount }) {
         bgcolor: "white",
         borderRadius: "12px",
         height: "100px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "20px",
       }}
     >
-      <Typography>{name}</Typography>
-      <Typography>${amount}</Typography>
+      <Typography sx={{ fontSize: "13px" }}>{name}</Typography>
+      <Typography sx={{ fontWeight: "bold", fontSize: "32px" }}>
+        ${amount}
+      </Typography>
     </Box>
   );
 }

@@ -1,59 +1,74 @@
+import LargeLogo from "@/public/assets/images/logo-large.svg";
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import AppBar from "@mui/material/AppBar";
 import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import LargeLogo from "@/public/assets/images/logo-large.svg";
 import Image from "next/image";
-
-import Overview from "@/public/assets/images/icon-nav-overview.svg";
-import Transactions from "@/public/assets/images/icon-nav-transactions.svg";
-import Pots from "@/public/assets/images/icon-nav-pots.svg";
-import RecurringBills from "@/public/assets/images/icon-nav-recurring-bills.svg";
-import Budgets from "@/public/assets/images/icon-nav-budgets.svg";
-import MinimizeMenu from "@/public/assets/images/icon-minimize-menu.svg";
 
 export default function Layout({ children }) {
   const drawerWidth = 240;
   const menuItems = [
     {
       name: "Overview",
-      imageUrl: <Image src={Overview} alt="overview" />,
+      imageUrl: (
+        <Image
+          src="/assets/images/icon-overview.svg"
+          width={50}
+          height={50}
+          alt="overview"
+        />
+      ),
     },
     {
       name: "Transactions",
-      imageUrl: <Image src={Transactions} alt="Transactions" />,
+      imageUrl: (
+        <Image
+          src="/assets/images/icon-transactions.svg"
+          width={50}
+          height={50}
+          alt="Transactions"
+        />
+      ),
     },
     {
       name: "Pots",
-      imageUrl: <Image src={Pots} alt="Pots" />,
+      imageUrl: (
+        <Image
+          src="/assets/images/icon-pots.svg"
+          width={50}
+          height={50}
+          alt="Pots"
+        />
+      ),
     },
     {
       name: "Budgets",
-      imageUrl: <Image src={Budgets} alt="Budgets" />,
+      imageUrl: (
+        <Image
+          src="/assets/images/icon-budgets.svg"
+          width={50}
+          height={50}
+          alt="Budgets"
+        />
+      ),
     },
     {
       name: "Recurring Bills",
-      imageUrl: <Image src={RecurringBills} alt="Recurring Bills" />,
+      imageUrl: (
+        <Image
+          src="/assets/images/icon-recurring-bills.svg"
+          alt="Recurring Bills"
+          width={50}
+          height={50}
+        />
+      ),
     },
   ];
   return (
     <Box sx={{ display: "flex" }}>
-      {/* <AppBar
-        position="fixed"
-        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
-      >
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Permanent drawer
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
       <Drawer
         sx={{
           width: drawerWidth,
@@ -94,7 +109,13 @@ export default function Layout({ children }) {
         <List sx={{ height: "100px" }}>
           <ListItem disablePadding>
             <ListItemButton>
-              <Image src={MinimizeMenu} alt="MinimizeMenu" />,
+              <Image
+                src="/assets/images/icon-minimize-menu.svg"
+                alt="MinimizeMenu"
+                width={50}
+                height={50}
+              />
+              ,
               <ListItemText
                 primary="Minimize menu"
                 sx={{ paddingLeft: "20px", color: "white" }}
